@@ -23,14 +23,11 @@ pub mod command
             eprintln!("Invalid file path");
             return;
         }
-        for i in 0..user_input.len() { println!("{}", user_input[i]); }
         let file_path = &user_input[1];
         if std::path::Path::new(file_path).exists() == false {
             eprintln!("Invalid file path");
             return;
         }
-        
-            
     }
 
     fn parse_list_command(user_input: &Vec<&str>) {
